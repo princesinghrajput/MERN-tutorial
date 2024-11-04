@@ -25,7 +25,7 @@ function Counter() {
   };
   return (
     <div>
-      <h1>Counter: {count}</h1>
+      <h1 style={{backgroundColor: "pink"}}>Counter: {count}</h1>
       <button onClick={handleIncrease}>Increase</button>
       <button onClick={handleDecrease}>Increase</button>
 
