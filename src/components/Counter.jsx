@@ -33,7 +33,7 @@ function Counter() {
         post.map((post)=>{
             return(
                 <div>
-                    <h1 class>{post.title}</h1>
+                    <h1 className="text-center font-bold">{post.title}</h1>
                     <p>{post.body}</p>
                 </div>
             )
