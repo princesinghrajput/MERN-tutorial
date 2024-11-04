@@ -4,22 +4,22 @@ import { FaWind } from "react-icons/fa";
 import { WiHumidity } from "react-icons/wi";
 import { MdVisibility } from "react-icons/md";
 
-
-
-
 const Weather = () => {
   const [city, SetCity] = useState("");
   const [weather, setWeather] = useState({});
   console.log(weather)
 
-  const API_KEY = "API_KEY"
+  const API_KEY = import.meta.env.VITE_API_KEY;
+  const API_URL = import.meta.env.VITE_API_URL;
+  console.log(API_KEY)
 
   //! function to fetch data from api
   const fetchData = async () => {
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`
+      `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`
     );
     const data = await response.json();
+    console.log(data)
     setWeather(data);
   };
 
